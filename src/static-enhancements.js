@@ -11,7 +11,7 @@ function enhancedIndex() {
     .replace('/styles.css?v=3', '/styles.css?v=3&build=pr6')
     .replace('/app.js?v=3', '/app.js?v=3&build=pr6')
     .replace('</head>', '  <link rel="stylesheet" href="/enhancements.css?v=1">\n</head>')
-    .replace('</body>', '  <script src="/enhancements.js?v=1" defer></script>\n</body>');
+    .replace('</body>', '  <script src="/enhancements.js?v=1" defer></script>\n  <script src="/pr6-route-fixes.js?v=1" defer></script>\n</body>');
 }
 
 http.createServer = function patchedStaticCreateServer(options, listener) {
